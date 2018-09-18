@@ -1,0 +1,23 @@
+{
+    "name": "jumbo/jumbo",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Roman Voikovskyi",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jumbo\\Jumbo\\": "Classes"
+        }
+    },
+    "replace": {
+        "jumbo": "self.version",
+        "typo3-ter/jumbo": "self.version"
+    }
+}

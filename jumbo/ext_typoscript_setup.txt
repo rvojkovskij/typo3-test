@@ -1,0 +1,12 @@
+config.tx_extbase {
+    persistence {
+        classes {
+
+            Jumbo\Jumbo\Domain\Model\Jumbotron {
+                mapping {
+                    tableName = tt_content
+                }
+            }
+        }
+    }
+}

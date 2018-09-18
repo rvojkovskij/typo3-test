@@ -1,0 +1,67 @@
+lib.dynamicContent = COA
+lib.dynamicContent {
+    10 = LOAD_REGISTER
+    10.colPos.cObject = TEXT
+    10.colPos.cObject {
+        field = colPos
+        ifEmpty.cObject = TEXT
+        ifEmpty.cObject {
+            value.current = 1
+            ifEmpty = 0
+        }
+    }
+    20 = CONTENT
+    20 {
+        table = tt_content
+        select {
+            orderBy = sorting
+            where = colPos={register:colPos}
+            where.insertData = 1
+        }
+    }
+    90 = RESTORE_REGISTER
+}
+
+page = PAGE
+page {
+    headerData {
+        10 = TEXT
+        10.value (
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        )
+
+    }
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+        templateRootPaths {
+            0 = EXT:jumbo/Resources/Private/Templates/Jumbo/
+        }
+#        partialRootPaths {
+#            0 = EXT:jumbo/Resources/Private/Partials/Page/
+#        }
+        layoutRootPaths {
+            0 = EXT:jumbo/Resources/Private/Layouts/
+        }
+    }
+
+
+}
+
+tt_content {
+    jumbotron =< lib.fluidContent
+    jumbotron {
+        templateName = List
+
+        # Configure data processing
+#        dataProcessing {
+#            10 = Jumbo\Jumbo\DataProcessing\DefaultDataProcessor
+#            10 {
+#                as = jumboElement
+#            }
+##            20 = Jumbo\Jumbo\DataProcessing\DefaultDataProcessor
+#        }
+    }
+}

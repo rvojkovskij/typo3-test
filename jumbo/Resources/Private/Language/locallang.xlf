@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-16T15:52:33Z" product-name="jumbo">
+		<header/>
+		<body>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron">
+				<source>Jumbotron</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.tx_jumbo_column">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.subheade">
+				<source>Subheade</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.button_url">
+				<source>Button Url</source>
+			</trans-unit>
+			<trans-unit id="tx_jumbo_domain_model_jumbotron.button_text">
+				<source>Button Text</source>
+			</trans-unit>
+			<trans-unit id="jumbotron">
+				<source>JumboTron</source>
+			</trans-unit>
+			<trans-unit id="jumbotron.wizard.title">
+				<source>JumboTron</source>
+			</trans-unit>
+			<trans-unit id="jumbotron.wizard.description">
+				<source>JumboTron</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

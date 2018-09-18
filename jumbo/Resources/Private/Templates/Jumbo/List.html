@@ -1,0 +1,14 @@
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <f:debug>{_all}</f:debug>
+    <f:if condition="{contentElement.header}">
+        <div class="panel-heading">
+            <h3 class="panel-title">{contentElement.header}</h3>
+        </div>
+    </f:if>
+    <div class="panel-body">
+        {contentElement.body->f:format.html()}
+    </div>
+</f:section>
