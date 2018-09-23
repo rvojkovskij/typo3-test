@@ -1,5 +1,5 @@
 <?php
-namespace Jumbo\Jumbo\DataProcessing;
+namespace Jumbo\Jumbotron\DataProcessing;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -14,7 +14,7 @@ namespace Jumbo\Jumbo\DataProcessing;
  * The TYPO3 project - inspiring people to share!
  */
 
-use Jumbo\Jumbo\Domain\Model\Jumbotron;
+use Jumbo\Jumbotron\Domain\Model\Jumbotron;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
 use TYPO3\CMS\Extbase\Persistence\Generic\Mapper\DataMapper;
@@ -27,8 +27,9 @@ use TYPO3\CMS\Frontend\ContentObject\Exception\ContentRenderingException;
  */
 class DefaultDataProcessor implements DataProcessorInterface
 {
+
     /**
-     * Default data processor for content elements
+     * Process data for the CType "fs_slider"
      *
      * @param ContentObjectRenderer $cObj The content object renderer, which contains data of the content element
      * @param array $contentObjectConfiguration The configuration of Content Object
@@ -39,18 +40,34 @@ class DefaultDataProcessor implements DataProcessorInterface
      */
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
     {
-        // Parse and map the content onto an object
-        /* @var $contentElement Jumbotron */
-        $contentElement = $this->getDataMapper()->map(
-            Jumbotron::class,
-            array(
-                $cObj->data
-            )
-        )[0];
-        // Add default data (current PID and content element)
-        $processedData['contentElement'] = $contentElement;
+
         return $processedData;
     }
+
+//    /**
+//     * Default data processor for content elements
+//     *
+//     * @param ContentObjectRenderer $cObj The content object renderer, which contains data of the content element
+//     * @param array $contentObjectConfiguration The configuration of Content Object
+//     * @param array $processorConfiguration The configuration of this processor
+//     * @param array $processedData Key/value store of processed data (e.g. to be passed to a Fluid View)
+//     * @return array the processed data as key/value store
+//     * @throws ContentRenderingException
+//     */
+//    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
+//    {
+//        // Parse and map the content onto an object
+//        /* @var $contentElement Jumbotron */
+//        $contentElement = $this->getDataMapper()->map(
+//            Jumbotron::class,
+//            array(
+//                $cObj->data
+//            )
+//        )[0];
+//        // Add default data (current PID and content element)
+//        $processedData['contentElement'] = $contentElement;
+//        return $processedData;
+//    }
 
     /**
      * @return object

@@ -1,9 +1,8 @@
 <?php
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Jumbotron',
     'description' => '',
-    'category' => 'plugin',
+    'category' => 'misc',
     'author' => 'Roman Voikovskyi',
     'author_email' => 'rvojkovskij@gmail.com',
     'state' => 'alpha',

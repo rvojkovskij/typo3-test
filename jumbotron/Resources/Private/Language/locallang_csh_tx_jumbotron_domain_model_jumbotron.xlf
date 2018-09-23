@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-16T14:13:57Z" product-name="jumbo">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-23T13:36:59Z" product-name="jumbotron">
 		<header/>
 		<body>
 			<trans-unit id="type.description">
 				<source>type</source>
 			</trans-unit>
-			<trans-unit id="tx_jumbo_column.description">
+			<trans-unit id="tx_jumbotron_column.description">
 				<source>column</source>
 			</trans-unit>
 			<trans-unit id="header.description">
 				<source>header</source>
 			</trans-unit>
-			<trans-unit id="subheade.description">
-				<source>subheade</source>
+			<trans-unit id="subheader.description">
+				<source>subheader</source>
 			</trans-unit>
 			<trans-unit id="text.description">
 				<source>text</source>

@@ -1,3 +1,15 @@
+TCEFORM.tt_content.header_layout {
+    # Remove all existing options
+    keepItems =
+    # Replace with customized options
+    addItems {
+        1 = Level 1 (only use once)
+        0 = Level 2
+        3 = Level 3
+        100 = Hidden
+    }
+}
+
 lib.dynamicContent = COA
 lib.dynamicContent {
     10 = LOAD_REGISTER
@@ -37,13 +49,13 @@ page {
     10 {
         templateName = Default
         templateRootPaths {
-            0 = EXT:jumbo/Resources/Private/Templates/Jumbo/
+            0 = EXT:jumbotron/Resources/Private/Templates/Jumbotron/
         }
 #        partialRootPaths {
-#            0 = EXT:jumbo/Resources/Private/Partials/Page/
+#            0 = EXT:jumbotron/Resources/Private/Partials/Page/
 #        }
         layoutRootPaths {
-            0 = EXT:jumbo/Resources/Private/Layouts/
+            0 = EXT:jumbotron/Resources/Private/Layouts/
         }
     }
 
@@ -51,17 +63,17 @@ page {
 }
 
 tt_content {
-    jumbotron =< lib.fluidContent
-    jumbotron {
+    jumbotron_jumbotron =< lib.contentElement
+    jumbotron_jumbotron {
         templateName = List
 
         # Configure data processing
-#        dataProcessing {
-#            10 = Jumbo\Jumbo\DataProcessing\DefaultDataProcessor
-#            10 {
-#                as = jumboElement
-#            }
-##            20 = Jumbo\Jumbo\DataProcessing\DefaultDataProcessor
-#        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = general
+            }
+            20 = Jumbo\Jumbotron\DataProcessing\DefaultDataProcessor
+        }
     }
 }

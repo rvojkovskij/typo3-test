@@ -1,8 +1,19 @@
 <?php
-namespace Jumbo\Jumbo\Domain\Model;
+namespace Jumbo\Jumbotron\Domain\Model;
+
+/***
+ *
+ * This file is part of the "Jumbotron" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ *  (c) 2018 Roman Voikovskyi <rvojkovskij@gmail.com>
+ *
+ ***/
 
 /**
- * Content
+ * Jumbotron
  */
 class Jumbotron extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
@@ -28,11 +39,11 @@ class Jumbotron extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $header = '';
 
     /**
-     * subheade
+     * subheader
      *
      * @var string
      */
-    protected $subheade = '';
+    protected $subheader = '';
 
     /**
      * text
@@ -119,24 +130,24 @@ class Jumbotron extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the subheade
+     * Returns the subheader
      *
-     * @return string $subheade
+     * @return string $subheader
      */
-    public function getSubheade()
+    public function getSubheader()
     {
-        return $this->subheade;
+        return $this->subheader;
     }
 
     /**
-     * Sets the subheade
+     * Sets the subheader
      *
-     * @param string $subheade
+     * @param string $subheader
      * @return void
      */
-    public function setSubheade($subheade)
+    public function setSubheader($subheader)
     {
-        $this->subheade = $subheade;
+        $this->subheader = $subheader;
     }
 
     /**

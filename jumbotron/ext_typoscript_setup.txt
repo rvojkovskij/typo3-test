@@ -1,0 +1,14 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Jumbo\Jumbotron\Domain\Model\Jumbotron {
+        mapping {
+
+        }
+      }
+
+    }
+  }
+}
