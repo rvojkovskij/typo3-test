@@ -1,3 +1,5 @@
+# I've remove the fields in page TSConfig, but I'm not sure that it's the correct way
+# because it is delete these fields form all typo3 components
 TCEFORM.tt_content {
     # Remove header_layout
     header_layout.disabled = 1
