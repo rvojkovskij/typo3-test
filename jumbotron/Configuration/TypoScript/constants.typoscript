@@ -1,0 +1,8 @@
+styles.templates {
+    # cat=content/templates/b1; type=string; label= Path of Fluid Templates for all defined content elements
+    templateRootPath = EXT:jumbotron/Resources/Private/Templates/Jumbotron/
+    # cat=content/templates/b2; type=string; label= Path of Fluid Partials for all defined content elements
+    partialRootPath =
+    # cat=content/templates/b3; type=string; label= Path of Fluid Layouts for all defined content elements
+    layoutRootPath = EXT:jumbotron/Resources/Private/Layout/Jumbotron/
+}

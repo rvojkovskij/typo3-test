@@ -41,7 +41,7 @@ call_user_func(function () {
         ]
     );
 
-    // Adds the redirect field and the forgotHash field to the fe_users-table
+
     $additionalColumns = [
         'button_text' => [
             'exclude' => true,
@@ -60,7 +60,7 @@ call_user_func(function () {
                 'type' => 'input',
                 'renderType' => 'inputLink',
                 'size' => 50,
-                'max' => 1024,
+                'max' => 255,
                 'eval' => 'trim',
                 'fieldControl' => [
                     'linkPopup' => [

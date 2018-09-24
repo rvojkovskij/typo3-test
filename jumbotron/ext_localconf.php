@@ -23,12 +23,8 @@ call_user_func(
             ');
         }
 
-//		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-//        $iconRegistry->registerIcon(
-//            'jumbotron-plugin-jumbotron',
-//            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-//            ['source' => 'EXT:jumbotron/Resources/Public/Icons/user_plugin_jumbotron.svg']
-//        );
-//
+//        // Register for hook to show preview of tt_content element of CType="fluid_styled_slider" in page module
+//        $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['jumbotron_jumbotron']
+//            = Jumbo\Jumbotron\Hooks\PageLayoutView\JumboContentElementPreviewRenderer::class;
     }
 );
